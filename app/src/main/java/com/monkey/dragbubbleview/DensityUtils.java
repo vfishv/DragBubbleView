@@ -7,10 +7,7 @@ import android.util.TypedValue;
  * ���õ�λת���ĸ����� 
  */  
 public class DensityUtils {  
-    private DensityUtils() {  
-        /* cannot be instantiated */  
-        throw new UnsupportedOperationException("cannot be instantiated");  
-    }  
+    private DensityUtils() {}
   
     public static int dp2px(Context context, float dpVal) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,  
