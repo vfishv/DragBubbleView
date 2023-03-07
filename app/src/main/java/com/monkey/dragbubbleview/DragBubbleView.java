@@ -257,6 +257,7 @@ public class DragBubbleView extends View {
                         //间距小于可黏连的最大距离
                         if (d < maxD - maxD / 4) {//减去(maxD/4)的像素大小，是为了让黏连小球半径到一个较小值快消失时直接消失
                             mCircleRadius = mBubbleRadius - d / 8;//使黏连小球半径渐渐变小
+                            mCircleRadius = Math.max(mCircleRadius, 3);
                             if (mOnBubbleStateListener != null) {
                                 mOnBubbleStateListener.onDrag();
                             }
